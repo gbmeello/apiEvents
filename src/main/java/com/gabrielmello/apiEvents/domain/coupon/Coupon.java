@@ -1,7 +1,6 @@
 package com.gabrielmello.apiEvents.domain.coupon;
 
 import com.gabrielmello.apiEvents.domain.event.Event;
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,19 +14,18 @@ import java.util.UUID;
 @Table(name = "coupon")
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class Coupon {
-
     @Id
     @GeneratedValue
     private UUID id;
+
     private String code;
     private Integer discount;
     private Date valid;
 
     @ManyToOne
-    @JoinColumn(name = "event-id")
+    @JoinColumn(name = "event_id")
     private Event event;
-
 }

@@ -1,16 +1,12 @@
 package com.gabrielmello.apiEvents.domain.event;
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.UUID;
 import java.util.Date;
+import java.util.UUID;
 
 @Table(name = "event")
 @Entity
@@ -19,7 +15,6 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Event {
-
     @Id
     @GeneratedValue
     private UUID id;
@@ -30,5 +25,4 @@ public class Event {
     private String eventUrl;
     private Boolean remote;
     private Date date;
-
 }
